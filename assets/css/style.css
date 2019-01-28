@@ -1,0 +1,91 @@
+body
+{
+    background-color: black;
+    font-family: 'Courgette', cursive;
+    color: white;
+}
+#header-row
+{
+    height: 150px;
+}
+#header-row img
+{
+    height:80%;
+}
+#wand-magic, #hat-magic
+{
+    color: blueviolet;
+    font-size: 25px;
+}
+#scores-row
+{
+    height: 20%;
+    padding-top: 1%;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+}
+#main-content
+{
+    padding: 2%;
+}
+
+#refresh
+{
+   padding : 10px;
+}
+#errorMsg
+{
+    color: red;
+}
+
+#resetBtn
+{
+    height:50px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+#guessImg
+{
+    width: 250px;
+    height: 250px;
+}
+footer
+{
+    text-align: center;
+    color: lightblue;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 70px;
+    height: 10px;
+    width: 100%;
+    /* position: relative;
+    bottom:1%; */
+}
+#quotes
+{
+    color:cadetblue;
+    padding: 2%;
+}
+
+#answerCol, #guessedLetters
+{
+    padding:3%;
+    height : 80%;
+}
+#answer
+{
+    padding-top : 20%;
+}
+
+@media (max-width: 640px){
+
+    #header-Logo, #quotes, #guessImg, #successImg
+    {
+        display: none;
+    }
+    
+}
+
+
+
+
