@@ -24,6 +24,11 @@ body
     border-bottom: 1px solid white;
     border-top: 1px solid white;
 }
+
+#scores-row span
+{
+    color:red;
+}
 #main-content
 {
     padding: 2%;
@@ -45,7 +50,7 @@ body
     font-weight: bold;
     font-size: 20px;
 }
-#guessImg
+#guessImg 
 {
     width: 250px;
     height: 250px;
@@ -69,17 +74,31 @@ footer
 
 #answerCol, #guessedLetters
 {
-    padding:3%;
+    padding:1%;
     height : 80%;
+}
+
+#winner_Loser_msg
+{
+    color: green;
+}
+#answerCol h5
+{
+    padding-bottom : 5%;
 }
 #answer
 {
-    padding-top : 20%;
+    padding-top : 10%;
 }
 
-@media (max-width: 640px){
+#scoreImg
+{
+    width:100%;
+}
 
-    #header-Logo, #quotes, #guessImg, #successImg
+@media (max-width: 768px){
+
+    #header-Logo, #quotes, #guessImg, #scoreImg
     {
         display: none;
     }
