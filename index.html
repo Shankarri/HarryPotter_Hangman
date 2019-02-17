@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Harry Potter Hangman</title>
-    
-   <!-- Bring in the bootstrap CSS and user defined style.css-->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-   <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css?family=Courgette|Pacifico" rel="stylesheet">
-   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+
+    <!-- Bring in the bootstrap CSS and Google Fonts and Fontawesome and user defined style.css-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Pacifico" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
 
 </head>
+
+<!-- Onload the initialize some parameters for the game-->
+
 <body onload="initialize()">
     <div class="container">
+
+        <!-- Header Row for displying the title of the Game -->
         <div class="row" id="header-row">
             <div class="col-md-2"></div>
-            <div class="col-md-2">
-                <img id="header-Logo" src="assets/images/HP_Header_Logo.png">
-            </div>
+            <div class="col-md-2"><img id="header-Logo" src="assets/images/HP_Header_Logo.png"></div>
+            <div class="col-md-4"><img id="header-Img" src="assets/images/HP_Title2.png"></div>
             <div class="col-md-4">
-                <img id="header-Img" src="assets/images/HP_Title2.png">
+                <button id="hpPauseMusic" type="button" class="btn btn-info btn-lg">Play Music</button>
+                <audio id="hpmusic">
+                    <source src="assets/images/HP_theme_music.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
             </div>
-    
-            <div class="col-md-4"></div>
         </div>
+        <!---------- End of Header Row --------->
+
+        <!-- Row to display the Scores -->
         <div class="row" id="scores-row">
             <div class="col-md-1">
                 <i class="fas fa-magic" id="wand-magic"></i>
@@ -44,25 +55,44 @@
                 <i class="fas fa-hat-wizard" id="hat-magic"></i>
             </div>
         </div>
+        <!------ End of scores Row  --------->
+
+        <!-- Row for Main Content -->
         <div class="row" id="main-content">
-            <div class="col-md-4" id="guesscol">
-                <h5>Quotes: <span id="quotes"> </span></h5>
+
+            <!-- Column for dynamically displaying Guess Image Quotes and Guess Image-->
+            <div class="col-md-5" id="guesscol">
+                <h5 class="mb-3">Quotes: <span id="quotes"> </span></h5>
                 <img id="guessImg">
             </div>
-            <div class="col-md-8" id="answerCol">
-                    <h5>Question: <span id="question"> </span></h5>
-                    <h5 id="errorMsg">You have already guessed this letter</h5>
-                    <h5>Already Guessed Letters:</h5>
-                    <span id="guessedLetters"> </span>
-                    <h5 id="answer"></h5>
+            <!-- End column  -->
+
+            <!-- Column for dynamically displaying Questions and guessed letters -->
+            <div class="col-md-7" id="answerCol">
+                <h5>Question: <span id="question"> </span></h5>
+                <h5 id="errorMsg" class="text-danger">You have already guessed this letter</h5>
+                <h5>Already Guessed Letters:</h5>
+                <span id="guessedLetters"> </span>
+                <h5 id="answer"></h5>
             </div>
+            <!-- End column  -->
+
+            <!-- Column for dynamically displaying Success or failure Images and sounds -->
             <div class="col-md-4"></div>
             <div class="col-md-4">
-                <h3 id="winner_Loser_msg"></h3>
+                <audio id="winner_Loser_music">
+                    <source src="" type="audio/mpeg">
+                </audio>
+                <h4 id="correctAnswer" class="text-success"> The correct answer is </h4>
+                <h3 id="winner_Loser_msg"  class="text-primary"></h3>
                 <img id="scoreImg">
             </div>
             <div class="col-md-4"></div>
         </div>
+        <!-- End column  -->
+        <!------------- Row for Main Content --------------->
+
+        <!-- Row for Refresh button -->
         <div class="row" id="refresh">
             <div class="col-md-5"></div>
             <div class="col-md-2">
@@ -70,19 +100,21 @@
             </div>
             <div class="col-md-5"></div>
         </div>
+        <!-- End of Refresh row -->
+
+        <!-- Footer Row for displaying Copyright -->
         <div class="row" id="footer-row">
             <div class="col-md-12">
-                <audio id="hpmusic" autoplay loop>
-                    <source src="assets/images/HP_theme_music.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
                 <footer>
                     <h6>&copy; Copyright 2019 Shankarri Ragavan. I do not own any of the images / Gif used for this
                         game.</h6>
                 </footer>
             </div>
         </div>
+        <!-- End of Footer Row -->
+
     </div>
+
     <script src="assets/javascript/game.js"></script>
 </body>
 

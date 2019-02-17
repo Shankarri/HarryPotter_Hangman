@@ -1,9 +1,12 @@
+/*  Styles for body */
 body
 {
     background-color: black;
     font-family: 'Courgette', cursive;
     color: white;
 }
+
+/*  header row styles */
 #header-row
 {
     height: 150px;
@@ -12,11 +15,21 @@ body
 {
     height:80%;
 }
+
+/*  Music Pause button */
+#hpPauseMusic
+{
+    margin-top:10%;
+}
+
+/*  Font Awesome magic colors */
 #wand-magic, #hat-magic
 {
     color: blueviolet;
     font-size: 25px;
 }
+
+/*  Scores row Styles*/
 #scores-row
 {
     height: 20%;
@@ -25,63 +38,52 @@ body
     border-top: 1px solid white;
 }
 
-#scores-row span
+#scores-row span, #errorMsg
 {
     color:red;
 }
+
+/*  Main content alignment*/
 #main-content
 {
-    padding: 2%;
+    padding-top: 2%;
 }
 
+/*  Refresh row padding*/
 #refresh
 {
    padding : 10px;
 }
-#errorMsg
-{
-    color: red;
-}
 
-#resetBtn
+/*  Buttons text styles*/
+#resetBtn, #hpPauseMusic
 {
-    height:50px;
     color: black;
     font-weight: bold;
-    font-size: 20px;
 }
+
+/*  Guess Image styles*/
 #guessImg 
 {
     width: 250px;
     height: 250px;
 }
-footer
-{
-    text-align: center;
-    color: lightblue;
-    font-family: 'Gloria Hallelujah', cursive;
-    font-size: 70px;
-    height: 10px;
-    width: 100%;
-    /* position: relative;
-    bottom:1%; */
-}
+
+/*  Quotes font color*/
 #quotes
 {
     color:cadetblue;
     padding: 2%;
 }
 
+/*  Styles for main content text*/
 #answerCol, #guessedLetters
 {
     padding:1%;
     height : 80%;
 }
 
-#winner_Loser_msg
-{
-    color: green;
-}
+/*  Styles for answers col */
 #answerCol h5
 {
     padding-bottom : 5%;
@@ -91,14 +93,27 @@ footer
     padding-top : 10%;
 }
 
+/*  Styles for success or failure image */
 #scoreImg
 {
     width:100%;
 }
 
+/*  Footer styles*/
+footer
+{
+    text-align: center;
+    color: lightblue;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 70px;
+    height: 10px;
+    width: 100%;
+}
+
+/*  If screen is small do not display any images */
 @media (max-width: 768px){
 
-    #header-Logo, #quotes, #guessImg, #scoreImg
+    #header-Logo, #guesscol, #scoreImg, #hpPauseMusic
     {
         display: none;
     }
